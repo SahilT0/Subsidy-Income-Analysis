@@ -21,6 +21,9 @@ from sklearn.metrics import accuracy_score,confusion_matrix
 # For connecting with database
 import pymysql as m
 
+# For viewing
+import matplotlib.pyplot as plt
+
 
 # Importing data
 data_income = pd.read_csv("C:/Users/SAHIL/Data Science Projects/Subsidy Income/Dataset/income1.csv")
@@ -183,4 +186,49 @@ nat_sal = pd.crosstab(index=data2["nativecountry"],
                         margins=True,
                         normalize="index")
 # print(nat_sal)
+
+# Frequency Distribution of Salary Status
+# SalStat = sns.countplot(data2["SalStat"])
+# plt.show()
+
+# Histogram of Age
+# sns.distplot(data2["age"], bins=10, kde=True)
+# plt.show()
+
+# Box Plot - Age vs Salary Status
+# sns.boxplot(x='SalStat',y="age", data=data2)
+# plt.show()
+
+# Bar plot of JobType vs Salstat
+# sns.countplot(y="JobType", hue="SalStat", data=data2, order=data2["JobType"].value_counts().index)
+# plt.show()
+
+# Bar plot of Education vs Salstat
+# sns.countplot(y="EdType", hue="SalStat", data=data2, order=data2["EdType"].value_counts().index)
+# plt.show()
+
+# Bar plot Occupation vs Salstat
+# sns.countplot(y="occupation", hue="SalStat", data=data2, order=data2["occupation"].value_counts().index)
+# plt.show()
+
+# Histogram of Capital gain
+# sns.distplot(data2["capitalgain"])
+# plt.show()
+#
+# # Histogram of Capital gain
+# sns.distplot(data2["capitalgain"])
+# plt.show()
+
+# Box plot of Capital gain and loss for outliers detection
+# sns.boxplot(data2["capitalgain"], color="blue")
+# plt.show()
+#
+# sns.boxplot(data2["capitalloss"], color="red")
+# plt.show()
+
+# Box plot for hours per week vs salary status
+# sns.boxplot(x="SalStat", y="hoursperweek", data=data2)
+# plt.show()
+
+
 
