@@ -77,8 +77,55 @@ missing = data[data.isnull().any(axis=1)]
 data2 = data.dropna(axis=0)
 # print(data2)
 
-# Relationshpi between Independent Variables
+# Relationship between Independent Variables
 correlation = data2.select_dtypes(include="number").corr()
 # print(correlation)
+
+# Cross Table & Data visualization
+# print(data2.columns)
+
+# Gender proportion table
+gender = pd.crosstab(index= data2["gender"],
+                     columns="count",
+                     normalize=True)
+# print(gender)
+
+# Education Type proportion table
+EdType = pd.crosstab(index= data2["EdType"],
+                     columns="count",
+                     normalize=True)
+# print(EdType)
+
+# Marital Status proportion table
+maritalsta = pd.crosstab(index=data2["maritalstatus"],
+                         columns="count",
+                         normalize=True)
+# print(maritalsta)
+
+# Occupation proportion table
+occupation = pd.crosstab(index=data2["occupation"],
+                         columns="count",
+                         normalize=True)
+# print(occupation)
+
+# Relationship proportion table
+relationship = pd.crosstab(index=data2["relationship"],
+                           columns="count",
+                           normalize=True)
+# print(relationship)
+
+# Race proportion tables
+race = pd.crosstab(index=data2["race"],
+                   columns="count",
+                   normalize=True)
+# print(race)
+
+# Nativecountry Propotion table
+nativeco = pd.crosstab(index=data2["nativecountry"],
+                       columns="count",
+                       normalize=True,
+                       )
+nativeco = nativeco.sort_values(by="count", ascending=True)
+# print(nativeco)
 
 
