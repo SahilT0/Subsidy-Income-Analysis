@@ -128,4 +128,59 @@ nativeco = pd.crosstab(index=data2["nativecountry"],
 nativeco = nativeco.sort_values(by="count", ascending=True)
 # print(nativeco)
 
+# Gender vs Salary Status
+gen_salst = pd.crosstab(index=data2["gender"],
+                        columns=data2["SalStat"],
+                        margins=True,
+                        normalize="index")
+# print(gen_salst)
+
+# Jobtype vs Salary status
+job_sal = pd.crosstab(index=data2["JobType"],
+                        columns=data2["SalStat"],
+                        margins=True,
+                        normalize="index")
+# print(job_sal)
+
+# Education type vs Salary status
+ed_sal = pd.crosstab(index=data2["EdType"],
+                        columns=data2["SalStat"],
+                        margins=True,
+                        normalize="index")
+# print(ed_sal)
+
+# Marital Status vs Salary Status
+mart_sal = pd.crosstab(index=data2["maritalstatus"],
+                        columns=data2["SalStat"],
+                        margins=True,
+                        normalize="index")
+# print(mart_sal)
+
+# Occupation vs Salary status
+occ_sal = pd.crosstab(index=data2["occupation"],
+                        columns=data2["SalStat"],
+                        margins=True,
+                        normalize="index")
+# print(occ_sal)
+
+# Relationship vs Salary status
+rel_sal = pd.crosstab(index=data2["relationship"],
+                        columns=data2["SalStat"],
+                        margins=True,
+                        normalize="index")
+# print(rel_sal)
+
+# Race vs Salary status
+race_sal = pd.crosstab(index=data2["race"],
+                        columns=data2["SalStat"],
+                        margins=True,
+                        normalize="index")
+# print(race_sal)
+
+# Native Country vs Salary Status
+nat_sal = pd.crosstab(index=data2["nativecountry"],
+                        columns=data2["SalStat"],
+                        margins=True,
+                        normalize="index")
+# print(nat_sal)
 
