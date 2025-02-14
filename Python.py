@@ -28,3 +28,11 @@ data_income = pd.read_csv("C:/Users/SAHIL/Data Science Projects/Subsidy Income/D
 # Creating Copy of Original data
 data = data_income.copy()
 
+# Know the data
+print(data.info)
+
+# Missing value
+print("Data with null values : \n", data.isnull().sum())
+
+
+
