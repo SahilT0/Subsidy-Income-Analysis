@@ -29,10 +29,17 @@ data_income = pd.read_csv("C:/Users/SAHIL/Data Science Projects/Subsidy Income/D
 data = data_income.copy()
 
 # Know the data
-print(data.info)
+# print(data.info)
 
 # Missing value
-print("Data with null values : \n", data.isnull().sum())
+# print("Data with null values : \n", data.isnull().sum())
 
+# Summary of numerical variables
+summary_num = data.describe()
+# print(summary_num)
 
+# Summary of Categorical variables
+pd.set_option("display.max_columns", None) # For all columns display in pycharm
+summary_cat = data.describe(include="object")
+print(summary_cat)
 
