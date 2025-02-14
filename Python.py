@@ -22,3 +22,9 @@ from sklearn.metrics import accuracy_score,confusion_matrix
 import pymysql as m
 
 
+# Importing data
+data_income = pd.read_csv("C:/Users/SAHIL/Data Science Projects/Subsidy Income/Dataset/income1.csv")
+
+# Creating Copy of Original data
+data = data_income.copy()
+
