@@ -77,3 +77,8 @@ missing = data[data.isnull().any(axis=1)]
 data2 = data.dropna(axis=0)
 # print(data2)
 
+# Relationshpi between Independent Variables
+correlation = data2.select_dtypes(include="number").corr()
+# print(correlation)
+
+
