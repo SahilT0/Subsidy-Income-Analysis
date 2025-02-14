@@ -61,7 +61,19 @@ pd.set_option("display.max_rows", None)
 # print(data["SalStat"].value_counts())
 
 # Checking for unique Classes
-print(np.unique(data["JobType"]))
-print(np.unique(data["occupation"]))
+# print(np.unique(data["JobType"]))
+# print(np.unique(data["occupation"]))
 
+data = pd.read_csv("C:/Users/SAHIL/Data Science Projects/Subsidy Income/Dataset/income1.csv", na_values=" ?")
+
+# data Preprocessing
+# print(data.isnull().sum())
+
+# Missing data
+missing = data[data.isnull().any(axis=1)]
+# print(missing)
+
+# Deleting the missing data
+data2 = data.dropna(axis=0)
+# print(data2)
 
