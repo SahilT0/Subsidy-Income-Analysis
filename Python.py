@@ -268,3 +268,19 @@ logistic.fit(train_x,train_y)
 # print(logistic.coef_)
 # print(logistic.intercept_)
 
+# Prediction from test data
+prediction = logistic.predict(test_x)
+# print(prediction)
+
+# Confusion Matrix
+confusion_mat = confusion_matrix(test_y, prediction)
+# print(confusion_mat)
+
+# Calculating the accuracy
+accuracy_sco = accuracy_score(test_y, prediction)
+# print(accuracy_sco)
+
+# Printing the misclassified values from prediction
+# print("Misclassified samples :- ", (test_y != prediction).sum())
+
+
