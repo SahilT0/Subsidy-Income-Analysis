@@ -240,3 +240,19 @@ nat_sal = pd.crosstab(index=data2["nativecountry"],
 # Converting categorical data into numerical by get dummies function
 new_data = pd.get_dummies(data2, drop_first=True)
 
+# Storing the columns names
+column_list = list(new_data.columns)
+# print(column_list)
+
+
+# Seprate the input names from data
+features = list(set(column_list)-set(["SalStat"]))
+# print(features)
+
+# Store the output values in y
+y = new_data["SalStat_ less than or equal to 50,000"].values
+# print(y)
+
+# Store the value from input features
+x = new_data[features].values
+print(x)
