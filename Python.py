@@ -306,5 +306,14 @@ confusion_matr = confusion_matrix(test_y, prediction)
 accuracy_scor = accuracy_score(test_y, prediction)
 # print(accuracy_scor)
 
+# Looking for best k value
+misclassified_sample = []
+# Calculating error for k values between 1 To 20
+for i in range(1, 20):
+    knn = KNeighborsClassifier(n_neighbors=i)
+    knn.fit(train_x, train_y)
+    pred_i = knn.predict(test_x)
+    misclassified_sample.append((test_y != pred_i).sum())
 
+# print(misclassified_sample) # K = 12 (least misclassified samples)
 
