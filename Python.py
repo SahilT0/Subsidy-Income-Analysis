@@ -255,4 +255,8 @@ y = new_data["SalStat_ less than or equal to 50,000"].values
 
 # Store the value from input features
 x = new_data[features].values
-print(x)
+# print(x)
+
+# Separating the data into train and test
+train_x, test_x, train_y, test_y = train_test_split(x, y, test_size=0.3, random_state=0)
+
