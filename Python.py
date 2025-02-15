@@ -289,6 +289,22 @@ accuracy_sco = accuracy_score(test_y, prediction)
 # Importing the Library for KNN
 from sklearn.neighbors import KNeighborsClassifier
 
+# Storing the k nearest neighbor classifier
+knn_classifier = KNeighborsClassifier(n_neighbors=5)
+
+# Fitting the values for x and y
+knn_classifier.fit(train_x, train_y)
+
+# Predicting the test values with model
+prediction = knn_classifier.predict(test_x)
+
+# Performance matrix check
+confusion_matr = confusion_matrix(test_y, prediction)
+# print(confusion_matr)
+
+# Accuracy score
+accuracy_scor = accuracy_score(test_y, prediction)
+# print(accuracy_scor)
 
 
 
