@@ -260,3 +260,11 @@ x = new_data[features].values
 # Separating the data into train and test
 train_x, test_x, train_y, test_y = train_test_split(x, y, test_size=0.3, random_state=0)
 
+# Make an instance of logistic regression
+logistic = LogisticRegression()
+
+# Fitting the values for x and y
+logistic.fit(train_x,train_y)
+# print(logistic.coef_)
+# print(logistic.intercept_)
+
