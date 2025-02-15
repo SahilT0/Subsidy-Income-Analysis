@@ -317,3 +317,6 @@ for i in range(1, 20):
 
 # print(misclassified_sample) # K = 12 (least misclassified samples)
 
+# Logistic Regression accuracy :- 99.8 and KNN model accuracy :- 93.4
+# It is clarified that in this case Logistic regression Model is far better than KNN Model
+
