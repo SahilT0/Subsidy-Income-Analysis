@@ -231,4 +231,12 @@ nat_sal = pd.crosstab(index=data2["nativecountry"],
 # plt.show()
 
 
+# ************** LOGISTIC REGRESSION ***********
+
+# Reindexing the salary status to 0 or 1
+# data2["SalStat"] = data2["SalStat"].map({" less than or equal to 50,000":0, " greater than 50,000":1})
+# print(data2["SalStat"])
+
+# Converting categorical data into numerical by get dummies function
+new_data = pd.get_dummies(data2, drop_first=True)
 
