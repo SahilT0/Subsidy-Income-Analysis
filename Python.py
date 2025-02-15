@@ -284,3 +284,11 @@ accuracy_sco = accuracy_score(test_y, prediction)
 # print("Misclassified samples :- ", (test_y != prediction).sum())
 
 
+# ********** KNN Classifier Model ********
+
+# Importing the Library for KNN
+from sklearn.neighbors import KNeighborsClassifier
+
+
+
+
