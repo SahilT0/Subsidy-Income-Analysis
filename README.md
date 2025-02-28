@@ -47,7 +47,8 @@ python income_classifier.py
 - Features are scaled, and data is split into training and testing sets.
 
 ## Correlation Between Numerical Variables
-![Correlation Matrix](./images/correlation_matrix.png)
+![Correlation ](https://github.com/user-attachments/assets/27c5ed37-9e61-4173-a28a-e6a05b1b2270)
+
 ```python
 correlation = data2.select_dtypes(include="number").corr()
 print(correlation)
@@ -66,35 +67,40 @@ print(correlation)
 The following visualizations help in data exploration:
 
 ### **1. Frequency Distribution of Salary Status**
-![Frequency Diagram](./images/frequency_diagram.png)
+![salary Status](https://github.com/user-attachments/assets/50eb283b-46ec-4333-a1fa-54352ce18aa7)
+
 ```python
 sns.countplot(data2["SalStat"])
 plt.show()
 ```
 
 ### **2. Histogram of Age**
-![Age Histogram](./images/histogram_age.png)
+![histogram_of_age](https://github.com/user-attachments/assets/e428d06b-0d0a-4c97-a530-1e52570562ab)
+
 ```python
 sns.distplot(data2["age"], bins=10, kde=True)
 plt.show()
 ```
 
 ### **3. Box Plot of Hours per Week vs Salary Status**
-![Box Plot](./images/boxplot_hoursperweek.png)
+![Hour per week and salstat](https://github.com/user-attachments/assets/225604ef-28ee-48f6-8d63-881866bba1bc)
+
 ```python
 sns.boxplot(x="SalStat", y="hoursperweek", data=data2)
 plt.show()
 ```
 
 ### **4. Histogram of Capital Gain**
-![Capital Gain Histogram](./images/histogram_capitalgain.png)
+![histogram of capital gain](https://github.com/user-attachments/assets/2be7f3b3-63c6-46e1-9197-68bdf3759db3)
+
 ```python
 sns.distplot(data2["capitalgain"])
 plt.show()
 ```
 
 ### **5. Confusion Matrix for Logistic Regression**
-![Confusion Matrix](./images/confusion_matrix_logistic.png)
+![cunfusion Matrix logitic regression](https://github.com/user-attachments/assets/2cf57dd9-3b40-4850-a903-c809f25a29eb)
+
 ```python
 from sklearn.metrics import ConfusionMatrixDisplay
 ConfusionMatrixDisplay.from_predictions(test_y, prediction)
@@ -102,7 +108,8 @@ plt.show()
 ```
 
 ### **6. Confusion Matrix for KNN Classifier**
-![Confusion Matrix KNN](./images/confusion_matrix_knn.png)
+![confusion Matrix knn](https://github.com/user-attachments/assets/f95533a7-634a-43d2-a1c0-a42945e7d2d1)
+
 ```python
 ConfusionMatrixDisplay.from_predictions(test_y, knn_prediction)
 plt.show()
