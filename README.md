@@ -49,12 +49,8 @@ python income_classifier.py
 ## Correlation Between Numerical Variables
 ![Correlation Matrix](./images/correlation_matrix.png)
 ```python
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-plt.figure(figsize=(10,8))
-sns.heatmap(data2.corr(), annot=True, cmap='coolwarm', fmt='.2f')
-plt.show()
+correlation = data2.select_dtypes(include="number").corr()
+print(correlation)
 ```
 
 ## Model Training
