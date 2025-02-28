@@ -46,6 +46,17 @@ python income_classifier.py
 - Categorical variables are converted into numerical using one-hot encoding.
 - Features are scaled, and data is split into training and testing sets.
 
+## Correlation Between Numerical Variables
+![Correlation Matrix](./images/correlation_matrix.png)
+```python
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(10,8))
+sns.heatmap(data2.corr(), annot=True, cmap='coolwarm', fmt='.2f')
+plt.show()
+```
+
 ## Model Training
 ### **1. Logistic Regression**
 - Used to classify income levels.
@@ -72,25 +83,32 @@ sns.distplot(data2["age"], bins=10, kde=True)
 plt.show()
 ```
 
-### **3. Confusion Matrix for Logistic Regression**
-![Confusion Matrix](./images/confusion_matrix.png)
-```python
-from sklearn.metrics import ConfusionMatrixDisplay
-ConfusionMatrixDisplay.from_predictions(test_y, prediction)
-plt.show()
-```
-
-### **4. Box Plot of Hours per Week vs Salary Status**
+### **3. Box Plot of Hours per Week vs Salary Status**
 ![Box Plot](./images/boxplot_hoursperweek.png)
 ```python
 sns.boxplot(x="SalStat", y="hoursperweek", data=data2)
 plt.show()
 ```
 
-### **5. Histogram of Capital Gain**
+### **4. Histogram of Capital Gain**
 ![Capital Gain Histogram](./images/histogram_capitalgain.png)
 ```python
 sns.distplot(data2["capitalgain"])
+plt.show()
+```
+
+### **5. Confusion Matrix for Logistic Regression**
+![Confusion Matrix](./images/confusion_matrix_logistic.png)
+```python
+from sklearn.metrics import ConfusionMatrixDisplay
+ConfusionMatrixDisplay.from_predictions(test_y, prediction)
+plt.show()
+```
+
+### **6. Confusion Matrix for KNN Classifier**
+![Confusion Matrix KNN](./images/confusion_matrix_knn.png)
+```python
+ConfusionMatrixDisplay.from_predictions(test_y, knn_prediction)
 plt.show()
 ```
 
@@ -103,5 +121,4 @@ If you want to contribute, feel free to fork the repository and submit a pull re
 
 ## License
 This project is licensed under the MIT License.
-
 
